@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <title>Frontend Mentor | Intro component with sign up form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+
+</head>
+<body>
+  <main>
+    <div class="container">
+
+      <div class="showcase">
+        <h1>Learn to code by watching others</h1>
+        <p>See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
+          but understanding how developers think is invaluable. </p>
+      </div>
+
+      <div class="form">
+
+        <div class="form__trial-text">
+
+          <p><span>Try it free 7 days</span> then $20/mo. thereafter</p>
+
+        </div>
+
+        <div class="form__signup">
+
+          <form action="">
+
+            <p class="input-aria-live sr-only" aria-live="polite"></p>
+          
+            <div class="input-container">
+              <img src="images/icon-error.svg" class="error-icon" aria-hidden="true" alt="">
+              <label for="firstName" class="sr-only">Enter firstname</label>
+              <input autoComplete="off" type="text" name="firstName" id="firstName" placeholder="First Name" >
+              <span id="errorFirstName" class="error-input">Firstname is required!</span>
+            </div>
+            
+            <div class="input-container">
+              <img src="images/icon-error.svg" class="error-icon" aria-hidden="true" alt="">
+              <label for="lastName" class="sr-only">Enter lastname</label>
+              <input autoComplete="off" type="text" name="lastName" id="lastName" placeholder="Last Name" >
+              <span id="errorLastName" class="error-input">LastName is required!</span>
+            </div>
+            
+            <div class="input-container">
+              <img src="images/icon-error.svg" class="error-icon" aria-hidden="true" alt="">
+              <label for="email" class="sr-only">Enter email</label>
+              <input autoComplete="off" type="text" name="email" id="email" placeholder="Email Address" >
+              <span id="errorEmail" class="error-input">Email is required!</span>
+            </div>
+
+            <div class="input-container">
+              <img src="images/icon-error.svg" class="error-icon" aria-hidden="true" alt="">
+              <label for="password" class="sr-only">Enter password</label>
+              <input autoComplete="off" type="password" name="password" id="password" placeholder="Password" >
+              <span id="errorPassword" class="error-input">password is required!</span>
+            </div>
+            
+            <!-- Always specify the submit button with its type="button" -->
+            <button type="submit">Claim your free trial</button>
+          </form>
+
+          <p class="form__footer">By clicking the button, you are agreeing to our <span class="terms">Terms and Services</span></p>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </p>
+  </footer> -->
+  
+  <script src="js/main.js"></script>
+</body>
+</html>

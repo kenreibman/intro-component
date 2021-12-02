@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --red: hsl(0, 100%, 74%);
+  --green: hsl(154, 59%, 51%);
+  --blue: hsl(248, 32%, 49%);
+  --dark-blue: hsl(249, 10%, 26%);
+  --grayish--blue: hsl(246, 25%, 77%);
+
+  --ff-main: "Poppins", sans-serif;
+}
+
+/* RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* GLOBAL */
+
+html {
+  font-size: 1rem;
+  font-family: var(--ff-main);
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+
+  background-image: url(../images/bg-intro-mobile.png);
+  background-size: cover;
+  background-color: var(--red);
+}
+
+span {
+  font-weight: 600;
+}
+
+.terms {
+  color: var(--red);
+  font-weight: 600;
+}
+
+/* MAIN (MOBILE FIRST) */
+.container {
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+
+  padding: 1.5rem;
+}
+
+/* SHOWCASE TEXT */
+
+.showcase {
+  color: white;
+  max-width: 500px;
+}
+
+.showcase h1 {
+  font-size: 1.7rem;
+  line-height: 1.4;
+  margin-top: 4rem;
+}
+
+.showcase p {
+  margin-top: 1.5rem;
+  line-height: 1.6;
+}
+
+/* TRIAL TEXT */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  max-width: 500px;
+}
+
+.form__trial-text {
+  padding: 1.3rem 4.5rem;
+  background-color: var(--blue);
+  /* max-width: 500px; */
+  border-radius: 0.5rem;
+
+  width: 100%;
+
+  color: white;
+  line-height: 1.6;
+
+  margin-top: 3.8rem;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.form__signup {
+  padding: 1.4rem 1.4rem 0.7rem;
+  background-color: white;
+  /* max-width: 500px; */
+  border-radius: 0.5rem;
+  margin-top: 1.3rem;
+}
+
+/* FORM INPUT */
+
+.input-container {
+  max-height: 72px;
+  position: relative;
+}
+
+input {
+  width: 100%;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid lightgray;
+}
+
+input:focus {
+  outline: 1px solid var(--blue);
+}
+
+input::placeholder {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.error-input {
+  visibility: hidden;
+}
+
+.show-error {
+  visibility: visible;
+}
+
+.hasError {
+  border: 2px solid red;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+.error-icon {
+  visibility: hidden;
+  position: absolute;
+  right: 0;
+  top: 25%;
+  transform: translateX(-25px);
+}
+
+/* FORM FOOTER */
+.form__footer {
+  font-size: 0.7rem;
+  padding: 1rem;
+  padding-top: 0.6rem;
+  line-height: 1.8;
+}
+
+/* button */
+button {
+  width: 100%;
+  padding: 1rem 0.6rem;
+
+  word-spacing: 0.16rem;
+
+  border-radius: 0.5rem;
+  border: none;
+
+  background-color: var(--green);
+  text-transform: uppercase;
+  font-weight: 500;
+  color: white;
+}
+
+/* FOOTER
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%); 
+} */
