@@ -1,7 +1,6 @@
 const form = document.querySelector("form");
 const liveRegion = document.querySelector(".input-aria-live");
 
-
 const testEmail = email=>{
 	let re = /^([a-z\d\.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
 	return re.test(email);

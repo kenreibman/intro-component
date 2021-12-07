@@ -37,38 +37,43 @@
             <p class="input-aria-live sr-only" aria-live="polite"></p>
           
             <div class="input-container">
-              <img src="images/icon-error.svg" class="error-icon" aria-hidden="true" alt="">
               <label for="firstName" class="sr-only">Enter firstname</label>
               <input autoComplete="off" type="text" name="firstName" id="firstName" placeholder="First Name" >
-              <span id="errorFirstName" class="error-input">Firstname is required!</span>
+              <span id="errorFirstName" class="error-input">
+                <p class="error-text">First Name cannot be empty</p> 
+                <img src="images/icon-error.svg" class="error-icon " aria-hidden="true" alt="">
+              </span>
             </div>
             
             <div class="input-container">
-              <img src="images/icon-error.svg" class="error-icon" aria-hidden="true" alt="">
               <label for="lastName" class="sr-only">Enter lastname</label>
               <input autoComplete="off" type="text" name="lastName" id="lastName" placeholder="Last Name" >
-              <span id="errorLastName" class="error-input">LastName is required!</span>
+              <span id="errorLastName" class="error-input"><p class="error-text">First Name cannot be empty</p> 
+                <img src="images/icon-error.svg" class="error-icon " aria-hidden="true" alt="">
+              </span>
             </div>
             
             <div class="input-container">
-              <img src="images/icon-error.svg" class="error-icon" aria-hidden="true" alt="">
               <label for="email" class="sr-only">Enter email</label>
               <input autoComplete="off" type="text" name="email" id="email" placeholder="Email Address" >
-              <span id="errorEmail" class="error-input">Email is required!</span>
+              <span id="errorEmail" class="error-input"><p class="error-text">Looks like this is not an email</p> 
+                <img src="images/icon-error.svg" class="error-icon " aria-hidden="true" alt="">
+              </span>
             </div>
 
             <div class="input-container">
-              <img src="images/icon-error.svg" class="error-icon" aria-hidden="true" alt="">
               <label for="password" class="sr-only">Enter password</label>
               <input autoComplete="off" type="password" name="password" id="password" placeholder="Password" >
-              <span id="errorPassword" class="error-input">password is required!</span>
+              <span id="errorPassword" class="error-input"><p class="error-text">Password cannot be empty</p> 
+                <img src="images/icon-error.svg" class="error-icon " aria-hidden="true" alt="">
+              </span>
             </div>
             
             <!-- Always specify the submit button with its type="button" -->
             <button type="submit">Claim your free trial</button>
           </form>
 
-          <p class="form__footer">By clicking the button, you are agreeing to our <span class="terms">Terms and Services</span></p>
+          <p class="form__footer">By clicking the button, you are agreeing to our <a href="https://theticksuit.com/pages/terms-and-conditions" target="_blank"><span class="terms">Terms and Services</span></a></p>
 
         </div>
       </div>
@@ -78,7 +83,7 @@
   <!-- <footer>
     <p class="attribution">
       Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="https://github.com/lmaoken">Ken Reibman</a>.
     </p>
   </footer> -->
   

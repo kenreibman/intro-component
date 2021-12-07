@@ -87,7 +87,6 @@ html {
   font-family: var(--ff-main);
 }
 
-/* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
@@ -107,7 +106,12 @@ span {
   font-weight: 600;
 }
 
-/* MAIN (MOBILE FIRST) */
+a {
+  all: unset;
+}
+
+/* MOBILE FIRST (375px) */
+
 .container {
   min-height: 100vh;
 
@@ -120,7 +124,7 @@ span {
   padding: 1.5rem;
 }
 
-/* SHOWCASE TEXT */
+/* SHOWCASE TEXT H1 and DESCRIPTION */
 
 .showcase {
   color: white;
@@ -138,20 +142,18 @@ span {
   line-height: 1.6;
 }
 
-/* TRIAL TEXT */
+/* CONTAINER FOR "TRY IT FREE 7 DAYS..." and SIGN UP INPUT */
 
 .form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
   max-width: 500px;
+  flex-grow: 1;
 }
 
+/* "TRY IT FREE 7 DAYS..." */
+
 .form__trial-text {
-  padding: 1.3rem 4.5rem;
+  padding: 1.25rem 4.5rem;
   background-color: var(--blue);
-  /* max-width: 500px; */
   border-radius: 0.5rem;
 
   width: 100%;
@@ -163,18 +165,21 @@ span {
   box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
+/* FORM SIGN UP INPUT CONTAINER */
+
 .form__signup {
   padding: 1.4rem 1.4rem 0.7rem;
   background-color: white;
   /* max-width: 500px; */
   border-radius: 0.5rem;
   margin-top: 1.3rem;
+
+  width: 100%;
 }
 
-/* FORM INPUT */
+/* INDIVIDUAL FORM INPUT */
 
 .input-container {
-  max-height: 72px;
   position: relative;
 }
 
@@ -194,8 +199,19 @@ input::placeholder {
   font-size: 0.9rem;
 }
 
+/* ERROR MESSAGE STYLING */
+
 .error-input {
   visibility: hidden;
+  color: var(--red);
+  font-size: 0.8rem;
+}
+
+.error-text {
+  text-align: right;
+  font-size: 0.6rem;
+  font-style: italic;
+  font-weight: 400;
 }
 
 .show-error {
@@ -218,22 +234,13 @@ input::placeholder {
 }
 
 .error-icon {
-  visibility: hidden;
   position: absolute;
   right: 0;
   top: 25%;
   transform: translateX(-25px);
 }
 
-/* FORM FOOTER */
-.form__footer {
-  font-size: 0.7rem;
-  padding: 1rem;
-  padding-top: 0.6rem;
-  line-height: 1.8;
-}
-
-/* button */
+/* BUTTON ("CLAIM FREE TRIAL") */
 button {
   width: 100%;
   padding: 1rem 0.6rem;
@@ -247,14 +254,87 @@ button {
   text-transform: uppercase;
   font-weight: 500;
   color: white;
+
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
-/* FOOTER
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
+button:hover {
+  opacity: 80%;
 }
-.attribution a {
-  color: hsl(228, 45%, 44%); 
-} */
+
+/* FORM FOOTER (TERMS AND SERVICES) */
+.form__footer {
+  font-size: 0.7rem;
+  padding: 1rem;
+  padding-top: 0.6rem;
+  line-height: 1.8;
+}
+
+/* == MEDIA QUERIES == */
+
+/* 1000px */
+@media screen and (min-width: 62.5rem) {
+  body {
+    background-image: url(../images/bg-intro-desktop.png);
+  }
+}
+
+/* 1020px */
+@media screen and (min-width: 63.75rem) {
+  .container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .form {
+    max-width: 538px;
+  }
+
+  .form__trial-text {
+    margin-top: 0rem;
+  }
+
+  .form__signup {
+    padding: 2.5rem 2.5rem 1.8rem;
+  }
+
+  .showcase h1 {
+    font-size: 3rem;
+    text-align: left;
+    line-height: 1.1;
+    margin-top: 1rem;
+  }
+
+  .showcase p {
+    text-align: left;
+    margin-top: 1.8rem;
+  }
+}
+
+/* 1440px */
+@media screen and (min-width: 90rem) {
+  .showcase {
+    margin-right: 4.2rem;
+  }
+
+  .form__trial-text {
+    margin-top: 0.5rem;
+    padding: 1.2rem 4.5rem 1rem;
+  }
+
+  .form__signup {
+    padding: 2.5rem 2.5rem 1.8rem;
+  }
+
+  .input-container {
+    margin-bottom: 0.2rem;
+  }
+
+  input {
+    padding-left: 2rem;
+  }
+
+  .form__footer {
+    padding-top: 1rem;
+  }
+}
