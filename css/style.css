@@ -106,10 +106,6 @@ span {
   font-weight: 600;
 }
 
-a {
-  all: unset;
-}
-
 /* MOBILE FIRST (375px) */
 
 .container {
@@ -260,6 +256,7 @@ button {
 
 button:hover {
   opacity: 80%;
+  cursor: pointer;
 }
 
 /* FORM FOOTER (TERMS AND SERVICES) */
@@ -268,6 +265,13 @@ button:hover {
   padding: 1rem;
   padding-top: 0.6rem;
   line-height: 1.8;
+
+  color: var(--grayish--blue);
+}
+
+.form__footer a {
+  cursor: pointer;
+  text-decoration: none;
 }
 
 /* == MEDIA QUERIES == */
